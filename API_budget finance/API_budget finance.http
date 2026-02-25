@@ -1,6 +1,17 @@
-@API_budget_finance_HostAddress = http://localhost:5103
+### Test de connexion avec le mauvais mot de passe
+POST https://localhost:7195/api/Auth/login
+Content-Type: application/json
 
-GET {{API_budget_finance_HostAddress}}/weatherforecast/
-Accept: application/json
+{
+  "username": "admin",
+  "password": "123"
+}
 
-###
+### Test de connexion avec le BON mot de passe
+POST https://localhost:7195/api/Auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "1234"
+}
