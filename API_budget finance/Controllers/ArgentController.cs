@@ -19,7 +19,15 @@ namespace API_budget_finance.Controllers
         {
             var userId = _authenticatedUserContext.UserId;
             // Logic to get the list of "Argent" entities for the authenticated user
-            var argents = _context.Argents.Where(a => a.UserId == userId).ToList();
+            var argents = _context.Argents.Where(a => a.UserId == userId).Select(a => new 
+            {
+                a.Id,
+                a.Type,
+                a.Description,
+                a.Montant,
+                a.CategoryId,
+                a.DateOperation
+            }).ToList();
             return Ok(argents);
         }
         [HttpPost]

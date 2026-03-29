@@ -11,5 +11,6 @@ namespace API_budget_finance.Models
 
         public string UserId { get; set; }
         public User User { get; set; }
+        
     }
 }
