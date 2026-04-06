@@ -3,7 +3,10 @@ using API_budget_finance.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // --- 1. CONFIGURATION DE LA BASE DE DONNÉES ---
 // On dit au serveur : "Utilise SQL Server avec l'adresse notée dans appsettings.json"
